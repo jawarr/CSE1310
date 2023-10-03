@@ -15,7 +15,7 @@ int main (void) {
     else if (c > a && c > b)
     printf("%f\n", c);
 
-    else 
+    else
     printf("The 3 numbers are equivalent.\n");
     
 
