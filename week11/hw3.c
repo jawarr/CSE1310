@@ -13,14 +13,46 @@ char gradeEval (float numGrade)
     else return 'X';
 }
 
-int main (void) {
+int main (void) 
+{ 
+    srand(time(NULL));
+
     //Question 1
-    char letterGrade;
-    float phys, chem, engl, math;
-    printf("Enter grades for Physics, Chemistry, English, and Mathematics (seperated by spaces): ");
-    scanf("%f%f%f%f", &phys, &chem, &engl, &math);
-    printf("REPORT CARD \nPhysics:%c \nChemistry:%c \nEnglish:%c \nMathematics:%c \n", gradeEval(phys), gradeEval(chem), gradeEval(engl), gradeEval(math));
+    // char letterGrade;
+    // float phys, chem, engl, math;
+    // printf("Enter grades for Physics, Chemistry, English, and Mathematics (seperated by spaces): ");
+    // scanf("%f%f%f%f", &phys, &chem, &engl, &math);
+    // printf("\nREPORT CARD \nPhysics:%c \nChemistry:%c \nEnglish:%c \nMathematics:%c \n\n\n", gradeEval(phys), gradeEval(chem), gradeEval(engl), gradeEval(math));
     
-    
+    //Question 2
+    float x, y;
+
+    printf("Enter the value of x: ");
+    scanf("%f", &x);
+    printf("Enter the value of y: ");
+    scanf("%f", &y);
+
+    int calc = rand() % 4 + 1;
+    printf("Randomized value of calc: %d\n", calc);
+
+    switch (calc)
+    {
+    case 1:
+        printf("Your output is x + y = %0.f\n", x+y);
+        break;
+    case 2:
+        printf("Your output is x - y = %0.f\n", x-y);
+        break;
+    case 3:
+        printf("Your output is x * y = %0.f\n", x*y);
+        break;
+    case 4:
+        printf("Your output is x / y = %f\n", x/y);
+        break;
+    default:
+        break;
+    }
+
+
     return 0;
 }
