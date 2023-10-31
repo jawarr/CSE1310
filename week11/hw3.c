@@ -13,46 +13,56 @@ char gradeEval (float numGrade)
     else return 'X';
 }
 
+void print_average (int a, int b, int c)
+{
+    float average = (a + b + c) / 3.0;
+    printf("The average of %d, %d, and %d is %.3f\n", a, b, c, average);
+}
+
 int main (void) 
 { 
     srand(time(NULL));
 
-    //Question 1
+    // printf("\n---------------Question 1---------------\n");
     // char letterGrade;
     // float phys, chem, engl, math;
     // printf("Enter grades for Physics, Chemistry, English, and Mathematics (seperated by spaces): ");
     // scanf("%f%f%f%f", &phys, &chem, &engl, &math);
-    // printf("\nREPORT CARD \nPhysics:%c \nChemistry:%c \nEnglish:%c \nMathematics:%c \n\n\n", gradeEval(phys), gradeEval(chem), gradeEval(engl), gradeEval(math));
+    // printf("\nREPORT CARD \nPhysics:%c \nChemistry:%c \nEnglish:%c \nMathematics:%c \n", gradeEval(phys), gradeEval(chem), gradeEval(engl), gradeEval(math));
     
-    //Question 2
-    float x, y;
+    // printf("\n---------------Question 2---------------\n");
+    // float x, y;
 
-    printf("Enter the value of x: ");
-    scanf("%f", &x);
-    printf("Enter the value of y: ");
-    scanf("%f", &y);
+    // printf("Enter the value of x: ");
+    // scanf("%f", &x);
+    // printf("Enter the value of y: ");
+    // scanf("%f", &y);
 
-    int calc = rand() % 4 + 1;
-    printf("Randomized value of calc: %d\n", calc);
+    // int calc = rand() % 4 + 1;
+    // printf("Randomized value of calc: %d\n", calc);
 
-    switch (calc)
-    {
-    case 1:
-        printf("Your output is x + y = %0.f\n", x+y);
-        break;
-    case 2:
-        printf("Your output is x - y = %0.f\n", x-y);
-        break;
-    case 3:
-        printf("Your output is x * y = %0.f\n", x*y);
-        break;
-    case 4:
-        printf("Your output is x / y = %f\n", x/y);
-        break;
-    default:
-        break;
-    }
+    // switch (calc)
+    // {
+    // case 1:
+    //     printf("Your output is x + y = %0.f\n", x+y);
+    //     break;
+    // case 2:
+    //     printf("Your output is x - y = %0.f\n", x-y);
+    //     break;
+    // case 3:
+    //     printf("Your output is x * y = %0.f\n", x*y);
+    //     break;
+    // case 4:
+    //     printf("Your output is x / y = %f\n", x/y);
+    //     break;
+    // default:
+    //     break;
+    // }
 
-
+    printf("\n---------------Question 3---------------\n");
+    int a, b, c;
+    printf("Enter 3 numbers: ");
+    scanf("%d%d%d", &a, &b, &c);
+    print_average(a, b, c);
     return 0;
 }
