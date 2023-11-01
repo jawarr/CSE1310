@@ -59,10 +59,17 @@ int main (void)
     //     break;
     // }
 
-    printf("\n---------------Question 3---------------\n");
-    int a, b, c;
-    printf("Enter 3 numbers: ");
-    scanf("%d%d%d", &a, &b, &c);
-    print_average(a, b, c);
+    // printf("\n---------------Question 3---------------\n");
+    // int a, b, c;
+    // printf("Enter 3 numbers: ");
+    // scanf("%d%d%d", &a, &b, &c);
+    // print_average(a, b, c);
+
+    printf("\n---------------Question 4---------------\n");
+    int intArray[4] = {0};
+    printf("Enter four numbers for the array: ");
+    scanf("%d%d%d%d", &intArray[0], &intArray[1], &intArray[2], &intArray[3]);
+    printf("%10.d%10.d%10.d%10.d ");
+    
     return 0;
 }
