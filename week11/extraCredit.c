@@ -11,7 +11,7 @@ void print2DimensionalArray(int rows, int columns, int source[rows][columns]);
 
 int main (void) {
     
-    //Initialize Array
+    //Initialize array
     int rows, columns;
 
     printf("Enter the number of rows: ");
@@ -21,7 +21,7 @@ int main (void) {
 
     int array[rows][columns];
 
-    //Populate Array
+    //Populate array
     for (int i = 0; i < rows; i++)
     {
         printf("Enter the values for row %d: ", i+1);
@@ -33,7 +33,7 @@ int main (void) {
     }
     printf("\n");
     
-    //Print Array
+    //Print array
     printf("Initial Array:\n");
     print2DimensionalArray(rows, columns, array);
     
@@ -49,7 +49,6 @@ int main (void) {
     
     //R1 <----> R2
     int r1r2swap[rows][columns];
-
     copy2DimensionalArray(rows, columns, array, r1r2swap);
 
     for (int i = 0; i < rows; i++)
@@ -62,11 +61,44 @@ int main (void) {
             }
         }
     }
-    
 
+    //R2 <----> R3
+    int r2r3swap[rows][columns];
+    copy2DimensionalArray(rows, columns, array, r2r3swap);
+
+    for (int i = 0; i < rows; i++)
+    {   
+        for (int j = 0; j < columns; j++)
+        {
+            {
+                r2r3swap[1][j] = r3[j];
+                r2r3swap[2][j] = r2[j];
+            }
+        }
+    }
+
+    //R3 <----> R1
+    int r3r1swap[rows][columns];
+    copy2DimensionalArray(rows, columns, array, r3r1swap);
+
+    for (int i = 0; i < rows; i++)
+    {   
+        for (int j = 0; j < columns; j++)
+        {
+            {
+                r3r1swap[0][j] = r3[j];
+                r3r1swap[2][j] = r1[j];
+            }
+        }
+    }
+    
+    //Print row-exchanged arrays
     printf("Row 1 exchanged with Row 2:\n");
     print2DimensionalArray(rows, columns, r1r2swap);
-    
+    printf("Row 2 exchanged with Row 3:\n");
+    print2DimensionalArray(rows, columns, r2r3swap);
+    printf("Row 3 exchanged with Row 1:\n");
+    print2DimensionalArray(rows, columns, r3r1swap);
     return 0;
 }
 
