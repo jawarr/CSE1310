@@ -66,10 +66,25 @@ int main (void)
     // print_average(a, b, c);
 
     printf("\n---------------Question 4---------------\n");
-    int intArray[4] = {0};
+    int intArray[4], index1, index2;
     printf("Enter four numbers for the array: ");
     scanf("%d%d%d%d", &intArray[0], &intArray[1], &intArray[2], &intArray[3]);
-    printf("%10.d%10.d%10.d%10.d ");
+    printf("\nInital array: %10.d%10.d%10.d%10.d\n", intArray[0], intArray[1], intArray[2], intArray[3]);
     
+    printf("\nEnter a index (0-3) to print: ");
+    scanf("%d", &index1);
+    printf("\nValue currently at index %d: %d\n", index1, intArray[index1]);
+    
+    printf("\nEnter two indices to swap: ");
+    scanf("%d%d", &index1, &index2);
+    
+    int a, b;
+    a = intArray[index1];
+    b = intArray[index2];
+    intArray[index1] = b;
+    intArray[index2] = a;
+    printf("\nUpdated array: %10.d%10.d%10.d%10.d\n", intArray[0], intArray[1], intArray[2], intArray[3]);
+
+
     return 0;
 }
