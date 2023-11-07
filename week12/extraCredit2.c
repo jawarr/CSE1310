@@ -30,7 +30,7 @@ void populateAccendingArray(int size, int source[size])
     {
         source[i] = i + 1;
     }
-}
+} 
 
 void printArray(int size, int source[size])
 {
