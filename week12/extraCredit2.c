@@ -11,12 +11,8 @@ int main(void)
     if (num > 0 && num <= 10)
     {
         int array[num];
-    
-        for (int i = 0; i < num; i++)
-        {
-            populateAccendingArray(num, array);
-        }
-    
+        populateAccendingArray(num, array);
+
         int size = num;
         for (int i = 0; i < num; i++)
         {
