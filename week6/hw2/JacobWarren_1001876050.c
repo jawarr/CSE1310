@@ -1,8 +1,9 @@
 #include <stdio.h>
 
-//Question 1
 
-int main (void) {
+int main(void) {
+    
+    printf("\n---------------Question 1---------------\n");
 
     float a, b, c;
     printf("Enter 3 numbers seperated by spaces: ");
@@ -19,14 +20,9 @@ int main (void) {
 
     else
     printf("The 3 numbers are equivalent.\n");
-    
 
-    return 0;
-}
+    printf("\n---------------Question 2---------------\n");
 
-//Question 2
-
-int main (void) {
     float num = 1;
     int count = 0;
     printf("Enter a number (enter 0 to terminate): ");
@@ -34,15 +30,11 @@ int main (void) {
     while (num != 0) {
         scanf("%f", &num);
         count++;
-        printf("%d\n", count);
+        printf("Count: %d\n", count);
     }
     
-    return 0;
-}
+    printf("\n---------------Question 3---------------\n");
 
-//Question 3
-
-int main (void) {
     int month;
     printf("Enter a number of a month (e.g. 1 for Jan, 2 for Feb,…): ");
     scanf("%d", &month);
@@ -63,21 +55,18 @@ int main (void) {
         printf("Please enter a number 1-12.\n");
         break;
     }
-    return 0;
-}
 
-//Question 4
+    printf("\n---------------Question 4---------------\n");
 
-int main (void) {
-    int n, i, sum = 0;
+    int num4, sum = 0;
 
     printf("Enter a positive integer: ");
-    scanf("%d", &n);
+    scanf("%d", &num4);
 
-    int initialNum = n;
+    int initialNum = num4;
 
-    if (n >= 1) {
-        for (int i = 1; i <= n; i++) {
+    if (num4 >= 1) {
+        for (int i = 1; i <= num4; i++) {
             sum += i;
             
         }
@@ -85,34 +74,23 @@ int main (void) {
     }
     else printf("Error: Not a positive integer\n");
 
-    return 0;
-}
+    printf("\n---------------Question 5---------------\n");
 
-//Question 5
-
-int main (void) {
-    int n;
+    int n5;
     printf("Enter an integer: ");
-    scanf("%d", &n);
+    scanf("%d", &n5);
     
     for (int i = 1; i <= 3 ; i++) {
         for (int j = 1; j <= 3 ; j++) {
-            printf ("%d\t", n);
-            n++;
+            printf ("%d\t", n5);
+            n5++;
         }
         printf("\n");
     }
     
+    printf("\n---------------Question 6---------------\n");
 
-    
-    return 0;
-}
-
-//Question 6
-
-int main (void) {
-
-    int phys, chem, math, i;
+    int phys, chem, math;
 
     printf("Enter your grade for Physics rounded to the nearest integer: ");
     scanf("%d", &phys);
@@ -126,7 +104,7 @@ int main (void) {
     int numArr[] = {phys, chem, math}; 
     char letterArr[3];
     
-    for (i = 0; i < 3; i++) {
+    for (int i = 0; i < 3; i++) {
         switch (numArr[i]) {
             case 90 ... 100:
                 letterArr[i] = 'A';
@@ -154,74 +132,57 @@ int main (void) {
     
     printf("\nREPORT CARD \nPhysics: %c \nChemistry: %c \nMathematics: %c\n", letterArr[0], letterArr[1], letterArr[2]);
 
-    return 0;
-}
+    printf("\n---------------Question 7---------------\n");
 
-//Question 7
-
-int main (void) {
-    
-    int num, i = 0;
+    int num7, i = 0;
     printf("Enter a positive integer: ");
-    scanf("%d", &num);
+    scanf("%d", &num7);
 
-    if (num >= 1) {
+    if (num7 >= 1) {
         while (i <= 12) {
-            printf("%d * %d = %d\n", num, i, num*i);
+            printf("%d * %d = %d\n", num7, i, num7*i);
             i++;
         }
     }
     else printf("Error: Not a positive integer\n");
 
-    return 0;
-}
+    printf("\n---------------Question 8---------------\n");
 
-// Question 8
-
-int main (void) {
-    
-    int num, i;
+    int num8;
     printf("Enter a positive integer: ");
-    scanf("%d", &num);
+    scanf("%d", &num8);
 
-    if (num >= 1) {
-        for (i = 12; i >= 0; i--) {
-            printf("%d * %d = %d\n", num, i, num*i);
+    if (num8 >= 1) {
+        for (int i = 12; i >= 0; i--) {
+            printf("%d * %d = %d\n", num8, i, num8*i);
         }
     } 
     else printf("Error: Not a positive integer\n");
 
-    return 0;
-}
+    printf("\n---------------Question 9---------------\n");
 
-//Question 9
-
-int main (void) {
-    int num, zeroCount = 0;
+    int num9, zeroCount = 0;
     while (1) {
         printf("Enter an integer: ");
-        scanf("%d", &num);
+        scanf("%d", &num9);
         
-        if (num == 0 && zeroCount == 0) {
+        if (num9 == 0 && zeroCount == 0) {
             printf("I'm a simple computer that doesn't understand ZEROS. Please don't enter ZEROS(0)\n");
             zeroCount++;
         } 
-        else if (num == 0 && zeroCount == 1) {
+        else if (num9 == 0 && zeroCount == 1) {
             printf("NO ZEROS. LAST WARNING.\n");
             zeroCount++;
         }
-        else if (num == 0 && zeroCount == 2) {
+        else if (num9 == 0 && zeroCount == 2) {
             printf("That's it! I QUIT!\n");
-            return 0;
+            break;
         } 
-        else printf("%d\n", num);
+        else printf("%d\n", num9);
     }
-}
 
-//Question 10
+    printf("\n---------------Question 10---------------\n");
 
-int main (void) {
-    
     int year;
     
     printf("Enter a year (yyyy): ");
@@ -242,48 +203,37 @@ int main (void) {
     } 
     else printf("Error: Year must be in a 4 digit format.\n");
 
-    return 0;
-}
+    printf("\n---------------Question 11---------------\n");
 
-//Question 11
-
-int main (void) {
-    
-    int rows, columns, i, j;
+    int rows, columns;
     printf("Enter the number of rows and columns seperated by spaces: ");
     scanf("%d%d", &rows, &columns);
     
-    for (i = 0; i < rows; i++) {
-        for (j = 0; j < columns; j++) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < columns; j++) {
             printf("*\t");
         }
         printf("\n\n");
     }
     
+    printf("\n---------------Question 12---------------\n");
 
-    return 0;
-}
-
-//Question 12
-
-int main (void) {
-    
-    int rows, columns, i, j, k;
+    int rows12, columns12;
     printf("Enter the number of rows and columns seperated by spaces: ");
-    scanf("%d%d", &rows, &columns);
+    scanf("%d%d", &rows12, &columns12);
     printf("\n");
     
-    for (i = 1; i <= rows; i++) {
+    for (int i = 1; i <= rows12; i++) {
         
-        if (i == 1 || i == rows) { 
-            for (j = 1; j <= columns; j++) {
+        if (i == 1 || i == rows12) { 
+            for (int j = 1; j <= columns12; j++) {
                 printf("*\t");
             }
             printf("\n\n");
         } 
         else {
-            for (k = 1; k <= columns; k++) {
-                if (k == 1 || k == columns) {
+            for (int k = 1; k <= columns12; k++) {
+                if (k == 1 || k == columns12) {
                     printf("*\t");
                 }
                 else printf(" \t");
@@ -292,53 +242,41 @@ int main (void) {
         } 
     }
 
-    return 0;
-}
+    printf("\n---------------Question 13---------------\n");
 
-//Question 13
-
-int main (void) {
-    int i, sum;
-    for (i = 0; i <= 50; i+=2) {
-        sum+=i;
+    int sum13;
+    for (int i = 0; i <= 50; i+=2) {
+        sum13+=i;
     }
-    printf("The sum of all even numbers between 1 and 50 is %d\n", sum);
-    return 0;
-}
+    printf("The sum of all even numbers between 1 and 50 is %d\n", sum13);
 
-//Question 14
-
-int main (void) {
+    printf("\n---------------Question 14---------------\n");
     
-    int num, i;
+    int num14;
     printf("Enter a number that has more than one digit: ");
-    scanf("%d", &num);
+    scanf("%d", &num14);
 
-    if (num >= 10) {
-        int lastDigit = num % 10;
-        while (num > 9) num /= 10;	  
-        printf("The sum of the first and last digits %d\n", num + lastDigit);
+    if (num14 >= 10) {
+        int lastDigit = num14 % 10;
+        while (num14 > 9) num14 /= 10;	  
+        printf("The sum of the first and last digits %d\n", num14 + lastDigit);
     } 
     else printf("Error: Number does not have multiple digits\n");
 
-    return 0;
-}
 
-//Question 15
+    printf("\n---------------Question 15---------------\n");
 
-int main (void) {
+    int num15 = 4, a1 = 4, d = 5, n = 50;
     
-    int i, num = 4, a1 = 4, d = 5, n = 50;
-    
-    for (i = 1; i <= 50; i++) {
-        printf("%d\n", num);
-        num+=5;
+    for (int i = 1; i <= 50; i++) {
+        printf("%d\n", num15);
+        num15+=5;
     }
     
     int a50 = a1+((n-1)*d);
-    int sum = n*(a1+a50)/2; 
+    int sum15 = n*(a1+a50)/2; 
 
-    printf("The partial sum of the arithmetic sequence is %d\n", sum);
+    printf("The partial sum of the arithmetic sequence is %d\n", sum15);
     
     return 0;
 }
