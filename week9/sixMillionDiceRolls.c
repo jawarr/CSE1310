@@ -31,7 +31,7 @@ int main (void) {
                 freqArr[n]++;
                 break;  
             default:
-                printf("Something bad happened");
+                printf("Something bad");
                 return 0;
                 break;
         }
